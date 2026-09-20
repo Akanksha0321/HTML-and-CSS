@@ -1,0 +1,428 @@
+
+/* =================================
+   ONE-PAGE PET WEBSITE
+   ================================= */
+
+/* General Website Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =================================
+   NAVIGATION BAR
+   ================================= */
+
+nav {
+    background-color: #34495e;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f1c40f;
+}
+
+/* =================================
+   ALL SECTIONS
+   ================================= */
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 28px;
+    color: #34495e;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* =================================
+   HOME SECTION
+   ================================= */
+
+#home {
+    background-color: #eaf2f8;
+    padding: 70px 20px;
+}
+
+#home h1 {
+    color: #2c3e50;
+}
+
+#home p {
+    color: #555;
+}
+
+/* =================================
+   PET PICTURES GALLERY
+   ================================= */
+
+#pictures {
+    background-color: white;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-image {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* =================================
+   LIGHTBOX MODAL
+   ================================= */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+
+    z-index: 1000;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.95);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Enlarged Image */
+
+.lightbox-content {
+    display: block;
+
+    max-width: 80%;
+    max-height: 80%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Close Button */
+
+.close {
+    position: absolute;
+
+    top: 20px;
+    right: 35px;
+
+    color: white;
+
+    font-size: 45px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 1001;
+
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #f1c40f;
+}
+
+/* Previous and Next Buttons */
+
+.prev,
+.next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    z-index: 1001;
+
+    transition: color 0.3s;
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.prev:hover,
+.next:hover {
+    color: #f1c40f;
+}
+
+/* =================================
+   CONTACT FORM
+   ================================= */
+
+#contact {
+    background-color: #eaf2f8;
+}
+
+form {
+    background-color: white;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    text-align: left;
+}
+
+form label {
+    display: block;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #34495e;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+}
+
+form textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+
+    border-color: #3498db;
+}
+
+/* Submit Button */
+
+form input[type="submit"] {
+    background-color: #3498db;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    font-size: 16px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #217dbb;
+}
+
+/* =================================
+   VIDEO SECTION
+   ================================= */
+
+#video {
+    background-color: white;
+}
+
+#video iframe {
+    max-width: 100%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* =================================
+   FOOTER
+   ================================= */
+
+footer {
+    background-color: #34495e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+footer p {
+    font-size: 16px;
+
+    margin: 0;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        padding: 15px;
+    }
+
+    nav a {
+        display: inline-block;
+
+        margin: 5px;
+
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .gallery-image {
+        width: 90%;
+
+        max-width: 350px;
+
+        height: 220px;
+    }
+
+    .lightbox-content {
+        max-width: 75%;
+        max-height: 70%;
+    }
+
+    .prev,
+    .next {
+        font-size: 28px;
+
+        padding: 8px;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+    .close {
+        right: 20px;
+
+        font-size: 35px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    #video iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+}

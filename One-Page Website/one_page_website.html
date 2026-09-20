@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>One-Page Pet Website</title>
+
+    <link rel="stylesheet" href="one_page_website.css">
+
+</head>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +33,41 @@
         <p>This website provides information and pictures about pets.</p>
     </section>
 
+
     <section id="pictures">
+
+        <h2>Pet Pictures</h2>
+
+        <div class="gallery-container">
+
+            <!-- Dog Image -->
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=300"
+                data-full="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=1200" alt="Cute dog"
+                class="gallery-image">
+
+            <!-- Cat Image -->
+            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300"
+                data-full="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=1200" alt="Cute cat"
+                class="gallery-image">
+
+        </div>
+
+    </section>
+
+    <!-- Lightbox Modal -->
+
+    <div id="lightbox" class="lightbox">
+
+        <span class="close">&times;</span>
+
+        <span class="prev">&#10094;</span>
+
+        <img id="lightbox-image" class="lightbox-content" alt="Enlarged pet image">
+
+        <span class="next">&#10095;</span>
+
+    </div>
+    <!-- <section id="pictures">
         <h2>Pet Pictures</h2>
 
         <img
@@ -34,7 +81,7 @@
             alt="Cute cat"
             width="300"
         >
-    </section>
+    </section> -->
 
     <section id="contact">
         <h2>Contact Us</h2>
@@ -62,18 +109,25 @@
     <section id="video">
         <h2>Pet Video</h2>
 
-        <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/1HygThMLzGs"
-            title="Pet video"
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1HygThMLzGs" title="Pet video"
             allowfullscreen>
         </iframe>
     </section>
+
+    <!-- <footer>
+        <p>&copy; 2026 One-Page Pet Website</p>
+    </footer>
+
+</body> -->
 
     <footer>
         <p>&copy; 2026 One-Page Pet Website</p>
     </footer>
 
+    <script src="JS/one_page_website.js"></script>
+
 </body>
+
+</html>
+
 </html>
